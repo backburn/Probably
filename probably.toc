@@ -1,0 +1,8 @@
+## Interface: 40300
+## Title: Probably
+## Notes: Probably
+## Author: Ben Phelps
+## SavedVariablesPerCharacter: ProbablyEngine_ConfigData
+## SavedVariables: ProbablyEngine_RotationData
+
+probably.xml
