@@ -8,6 +8,15 @@ Probably is in alpha status.
 
 ## Known Issues
 - You must /reload to get custom rotations to show up.
+- "player.party" and "player.raid" do not work properly.
+- "target.deathin" does not work properly.
+- "target.boss" returns false when it should not.
+- "!target.spell(Explosive Shot).range" may not be working.
+- "modifier.enemies" may not be working.
+- Need a way to see if X raid/party members are < Y health. ex: if 3 or more players are below 85% health use Chain Heal.
+- Better: Need a way to see if X raid/party members are within Y yards of target, [and under Z health].
+- Need a "health pressure" like deathin(seconds) for friendly targets. ex: If raid1.deathin(2) use Quick Heal.
+- A way to see if we are following. (Catch the "You are now following X" event?)
 
 ## DSL Conditions
 
@@ -51,8 +60,8 @@ Probably is in alpha status.
 	ProbablyEngine.condition.register("balance.sun", function(target, spell)
 	ProbablyEngine.condition.register("balance.moon", function(target, spell)
 	ProbablyEngine.condition.register("totem", function(target, totem)
-ProbablyEngine.condition.register("totem.duration", function(target, totem)
-ProbablyEngine.condition.register("mushrooms", function ()
+	ProbablyEngine.condition.register("totem.duration", function(target, totem)
+	ProbablyEngine.condition.register("mushrooms", function ()
 
 ### Positioning and Movement
 	ProbablyEngine.condition.register("behind", function(target, spell)
