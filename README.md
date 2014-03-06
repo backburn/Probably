@@ -1,22 +1,17 @@
-## Probably for Cataclysm
+# Probably for Cataclysm
 Probably is an event, module and timer based rotation optimization add-on for World of Warcraft Cataclysm.
 
 Probably is licensed under a modified BSD license.
 
 ## Notes
-**State Modifiers**
+Probably is in alpha status. 
 
-    modifier.cooldowns
-    modifier.multitarget
-    modifier.enemies > 3
-    modifier.shift
-    modifier.control
-    modifier.alt
-    modifier.taunt
+## Known Issues
+- You must /reload to get custom rotations to show up.
 
 ## DSL Conditions
 
-**Unit Resources**
+### Unit Resources
 	ProbablyEngine.condition.register("focus", function(target, spell)
 	ProbablyEngine.condition.register("holypower", function(target, spell)
 	ProbablyEngine.condition.register("shadoworbs", function(target, spell)
@@ -37,12 +32,12 @@ Probably is licensed under a modified BSD license.
 	ProbablyEngine.condition.register("mana", function(target, spell)
 	ProbablyEngine.condition.register("raid.health", function()
 	
-**Unit Form/Stance**
+### Unit Form/Stance
 	ProbablyEngine.condition.register("stance", function(target, spell)
 	ProbablyEngine.condition.register("form", function(target, spell)
 	ProbablyEngine.condition.register("seal", function(target, spell)
 
-**Buff/Debuff Functions**
+### Buff/Debuff Functions
 	ProbablyEngine.condition.register("buff", function(target, spell)
 	ProbablyEngine.condition.register("buff.any", function(target, spell)
 	ProbablyEngine.condition.register("buff.count", function(target, spell)
@@ -52,18 +47,18 @@ Probably is licensed under a modified BSD license.
 	ProbablyEngine.condition.register("debuff.duration", function(target, spell)
 	ProbablyEngine.condition.register("buff.duration", function(target, spell)
 
-**Class Specific Functions**
+### Class Specific Functions
 	ProbablyEngine.condition.register("balance.sun", function(target, spell)
 	ProbablyEngine.condition.register("balance.moon", function(target, spell)
 	ProbablyEngine.condition.register("totem", function(target, totem)
 ProbablyEngine.condition.register("totem.duration", function(target, totem)
 ProbablyEngine.condition.register("mushrooms", function ()
 
-**Positioning and Movement**
+### Positioning and Movement
 	ProbablyEngine.condition.register("behind", function(target, spell)
 	ProbablyEngine.condition.register("infront", function(target, spell)
 
-**Unit Status**
+### Unit Status
 	ProbablyEngine.condition.register("range", function(target, range)
 	ProbablyEngine.condition.register("level", function(target, range)
 	ProbablyEngine.condition.register("combat", function(target, range)
@@ -93,7 +88,7 @@ ProbablyEngine.condition.register("mushrooms", function ()
 	ProbablyEngine.condition.register("creatureType", function (target, expectedType)
 	ProbablyEngine.condition.register("class", function (target, expectedClass)
 	
-**Keybinds**
+### Keybinds
 	ProbablyEngine.condition.register("modifier.shift", function()
 	ProbablyEngine.condition.register("modifier.control", function()
 	ProbablyEngine.condition.register("modifier.alt", function()
@@ -104,14 +99,14 @@ ProbablyEngine.condition.register("mushrooms", function ()
 	ProbablyEngine.condition.register("modifier.rcontrol", function()
 	ProbablyEngine.condition.register("modifier.ralt", function()
 
-**Toggle Buttons**
+### Toggle Buttons
 	ProbablyEngine.condition.register("modifier.multitarget", function()
 	ProbablyEngine.condition.register("modifier.cooldowns", function()
 	ProbablyEngine.condition.register("modifier.cooldown", function()
 	ProbablyEngine.condition.register("modifier.toggle", function(toggle)
 	ProbablyEngine.condition.register("modifier.taunt", function()
 
-**Spells**
+### Spells
 	ProbablyEngine.condition.register("spell.cooldown", function(target, spell)
 	ProbablyEngine.condition.register("spell.recharge", function(target, spell)
 	ProbablyEngine.condition.register("spell.usable", function(target, spell)
@@ -121,7 +116,7 @@ ProbablyEngine.condition.register("mushrooms", function ()
 	ProbablyEngine.condition.register("spell.cd", function(target, spell)
 	ProbablyEngine.condition.register("spell.range", function(target, spell)
 	
-**Interrupts and Casting**
+### Interrupts and Casting
 	ProbablyEngine.condition.register('casting.time', function(target, spell)
 	ProbablyEngine.condition.register('casting.delta', function(target, spell)
 	ProbablyEngine.condition.register('channeling', function (target, spell)
@@ -132,7 +127,7 @@ ProbablyEngine.condition.register("mushrooms", function ()
 	ProbablyEngine.condition.register("modifier.interrupt", function()
 	ProbablyEngine.condition.register("modifier.last", function(target, spell)
 	
-**Misc**
+### Misc
 	ProbablyEngine.condition.register("dispellable", function(target, spell)
 	ProbablyEngine.condition.register("disarmable", function(target, spell)
 	ProbablyEngine.condition.register("modifier.enemies", function()
